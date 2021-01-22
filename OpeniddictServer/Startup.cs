@@ -24,7 +24,7 @@ namespace OpeniddictServer
             services.AddDbContext<ApplicationDbContext>( options =>
              {
                 // Configure the context to use Microsoft SQL Server.
-                options.UseSqlServer( Configuration.GetConnectionString( "DefaultConnection" ) );
+                options.UseSqlite( Configuration.GetConnectionString( "DefaultConnection" ) );
 
                 // Register the entity sets needed by OpenIddict.
                 // Note: use the generic overload if you need
@@ -45,7 +45,7 @@ namespace OpeniddictServer
                          builder
                              .AllowCredentials()
                              .WithOrigins(
-                                 new string[] { "https://localhost:44306", "https://localhost:44369" } )
+                                 new string[] { "http://localhost:3000", "https://localhost:44306" } )
                              .SetIsOriginAllowedToAllowWildcardSubdomains()
                              .AllowAnyHeader()
                              .AllowAnyMethod();
@@ -111,8 +111,8 @@ namespace OpeniddictServer
                             .AllowHybridFlow()
                             .AllowRefreshTokenFlow();
 
-                    // Mark the "email", "profile", "roles" and "dataEventRecords" scopes as supported scopes.
-                    options.RegisterScopes( Scopes.Email, Scopes.Profile, Scopes.Roles, "dataEventRecords" );
+                     // Mark the "email", "profile", "roles" and "travelxData" scopes as supported scopes.
+                     options.RegisterScopes( Scopes.Email, Scopes.Profile, Scopes.Roles, "travelxData" );
 
                     // Register the signing and encryption credentials.
                     options.AddDevelopmentEncryptionCertificate()
@@ -161,7 +161,7 @@ namespace OpeniddictServer
                     // Configure the audience accepted by this resource server.
                     // The value MUST match the audience associated with the
                     // "demo_api" scope, which is used by ResourceController.
-                    options.AddAudiences( "rs_dataEventRecordsApi" );
+                    options.AddAudiences( "rs_travelxDataApi" );
 
                     // Import the configuration from the local OpenIddict server instance.
                     options.UseLocalServer();

@@ -26,7 +26,7 @@ namespace ResourceService.Controllers
             _customerService = customerService;
         }
 
-        [Authorize( "dataEventRecordsPolicy" )]
+        [Authorize( "travelxDataPolicy" )]
         [HttpGet( "CustomerDetails/{id}", Name = nameof( CustomerDetails ) )]
         //[Route( "DetailsSection" )]
         public IActionResult CustomerDetails( int id )
