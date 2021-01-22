@@ -1,0 +1,6 @@
+﻿npm audit fix
+npm i react-scripts
+npm i node (if not installed from https://nodejs.org/en/download/)
+
+
+yarn add react-app-rewired history react-router-dom
