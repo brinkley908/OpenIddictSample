@@ -45,11 +45,11 @@ namespace OpeniddictServer
                         },
                         PostLogoutRedirectUris =
                         {
-                            new Uri("https://localhost:3000")
+                            new Uri("http://localhost:3000")
                         },
                         RedirectUris =
                         {
-                            new Uri("https://localhost:3000/signin-oidc")
+                            new Uri("http://localhost:3000/signin-oidc")
                         },
                         Permissions =
                         {
