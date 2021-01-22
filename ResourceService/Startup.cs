@@ -81,7 +81,7 @@ namespace ResourceService
 
             var guestPolicy = new AuthorizationPolicyBuilder()
              .RequireAuthenticatedUser()
-             .RequireClaim( "scope", "dataEventRecords" )
+             .RequireClaim( "scope", "travelxData" )
              .Build();
 
             services.AddAuthentication( options =>
@@ -95,13 +95,13 @@ namespace ResourceService
                   // Note: the validation handler uses OpenID Connect discovery
                   // to retrieve the address of the introspection endpoint.
                   options.SetIssuer( "https://localhost:44395/" );
-                  options.AddAudiences( "rs_dataEventRecordsApi" );
+                  options.AddAudiences( "rs_travelxDataApi" );
 
                   // Configure the validation handler to use introspection and register the client
                   // credentials used when communicating with the remote introspection endpoint.
                   options.UseIntrospection()
-                       .SetClientId( "rs_dataEventRecordsApi" )
-                       .SetClientSecret( "dataEventRecordsSecret" );
+                       .SetClientId( "rs_travelxDataApi" )
+                       .SetClientSecret( "travelxDataSecret" );
 
                   // Register the System.Net.Http integration.
                   options.UseSystemNetHttp();
@@ -114,7 +114,7 @@ namespace ResourceService
 
             services.AddAuthorization( options =>
             {
-                options.AddPolicy( "dataEventRecordsPolicy", policyUser =>
+                options.AddPolicy( "travelxDataPolicy", policyUser =>
                 {
                     policyUser.Requirements.Add( new RequireScope() );
                 } );
@@ -195,7 +195,7 @@ namespace ResourceService
 
             var scopeClaim = context.User.Claims.FirstOrDefault( t => t.Type == "scope" );
 
-            if ( scopeClaim != null && scopeClaim.Value.Contains( "dataEventRecords" ) )
+            if ( scopeClaim != null && scopeClaim.Value.Contains( "travelxData" ) )
             {
                 context.Succeed( requirement );
             }

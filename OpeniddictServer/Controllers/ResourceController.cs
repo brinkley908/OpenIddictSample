@@ -23,19 +23,19 @@ namespace OpeniddictServer.Controllers
         [HttpGet( "message" )]
         public async Task<IActionResult> GetMessage()
         {
-            // This demo action requires that the client application be granted the "dataEventRecords" scope.
+            // This demo action requires that the client application be granted the "travelxData" scope.
             // If it was not granted, a detailed error is returned to the client application to inform it
             // that the authorization process must be restarted with the specified scope to access this API.
-            if ( !User.HasScope( "dataEventRecords" ) )
+            if ( !User.HasScope( "travelxData" ) )
             {
                 return Forbid(
                     authenticationSchemes: OpenIddictValidationAspNetCoreDefaults.AuthenticationScheme,
                     properties: new AuthenticationProperties( new Dictionary<string, string>
                     {
-                        [OpenIddictValidationAspNetCoreConstants.Properties.Scope] = "dataEventRecords",
+                        [OpenIddictValidationAspNetCoreConstants.Properties.Scope] = "travelxData",
                         [OpenIddictValidationAspNetCoreConstants.Properties.Error] = Errors.InsufficientScope,
                         [OpenIddictValidationAspNetCoreConstants.Properties.ErrorDescription] =
-                            "The 'dataEventRecords' scope is required to perform this action."
+                            "The 'travelxData' scope is required to perform this action."
                     } ) );
             }
 

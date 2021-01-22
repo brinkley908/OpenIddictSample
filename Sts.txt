@@ -151,3 +151,272 @@ WHERE [o].[Name] = @__name_0
 2021-01-22 19:51:27.385 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/js/site.min.js?v=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU - - - 200 0 application/javascript 10.5278ms
 2021-01-22 19:51:27.393 +00:00 [INF] Sending file. Request path: '/js/vendor.min.js'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\js\vendor.min.js'
 2021-01-22 19:51:27.398 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/js/vendor.min.js?v=wNHTPTVKVXBuBXOTXGXVd6M_-Ew7niKBPydj094IUSE - - - 200 245888 application/javascript 30.7813ms
+2021-01-22 19:54:43.915 +00:00 [INF] User profile is available. Using 'C:\Users\brink\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-22 19:54:44.128 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2021-01-22 19:54:44.129 +00:00 [INF] Quartz Scheduler v.3.2.3.0 created.
+2021-01-22 19:54:44.136 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2021-01-22 19:54:44.137 +00:00 [INF] RAMJobStore initialized.
+2021-01-22 19:54:44.140 +00:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.2.3.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-22 19:54:44.140 +00:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2021-01-22 19:54:44.140 +00:00 [INF] Quartz scheduler version: 3.2.3.0
+2021-01-22 19:54:44.163 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2021-01-22 19:54:44.166 +00:00 [INF] Adding job: OpenIddict.Quartz.OpenIddictQuartzJob
+2021-01-22 19:54:44.183 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-01-22 19:54:45.147 +00:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+2021-01-22 19:54:45.512 +00:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT 1
+2021-01-22 19:54:45.573 +00:00 [INF] Executed DbCommand (39ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+
+IF EXISTS
+    (SELECT *
+     FROM [sys].[objects] o
+     WHERE [o].[type] = 'U'
+     AND [o].[is_ms_shipped] = 0
+     AND NOT EXISTS (SELECT *
+         FROM [sys].[extended_properties] AS [ep]
+         WHERE [ep].[major_id] = [o].[object_id]
+             AND [ep].[minor_id] = 0
+             AND [ep].[class] = 1
+             AND [ep].[name] = N'microsoft_database_tools_support'
+    )
+)
+SELECT 1 ELSE SELECT 0
+2021-01-22 19:54:45.953 +00:00 [INF] Executed DbCommand (21ms) [Parameters=[@__identifier_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[Id], [o].[ClientId], [o].[ClientSecret], [o].[ConcurrencyToken], [o].[ConsentType], [o].[DisplayName], [o].[DisplayNames], [o].[Permissions], [o].[PostLogoutRedirectUris], [o].[Properties], [o].[RedirectUris], [o].[Requirements], [o].[Type]
+FROM [OpenIddictApplications] AS [o]
+WHERE [o].[ClientId] = @__identifier_0
+2021-01-22 19:54:46.059 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@__identifier_0='?' (Size = 100)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[Id], [o].[ClientId], [o].[ClientSecret], [o].[ConcurrencyToken], [o].[ConsentType], [o].[DisplayName], [o].[DisplayNames], [o].[Permissions], [o].[PostLogoutRedirectUris], [o].[Properties], [o].[RedirectUris], [o].[Requirements], [o].[Type]
+FROM [OpenIddictApplications] AS [o]
+WHERE [o].[ClientId] = @__identifier_0
+2021-01-22 19:54:46.085 +00:00 [INF] Executed DbCommand (6ms) [Parameters=[@__name_0='?' (Size = 200)], CommandType='"Text"', CommandTimeout='30']
+SELECT TOP(1) [o].[Id], [o].[ConcurrencyToken], [o].[Description], [o].[Descriptions], [o].[DisplayName], [o].[DisplayNames], [o].[Name], [o].[Properties], [o].[Resources]
+FROM [OpenIddictScopes] AS [o]
+WHERE [o].[Name] = @__name_0
+2021-01-22 19:54:46.272 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-22 19:54:46.272 +00:00 [INF] Hosting environment: Development
+2021-01-22 19:54:46.272 +00:00 [INF] Content root path: E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer
+2021-01-22 19:54:46.312 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/ - -
+2021-01-22 19:54:46.467 +00:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.HomeController.Index (OpeniddictServer)'
+2021-01-22 19:54:46.483 +00:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller OpeniddictServer.Controllers.HomeController (OpeniddictServer).
+2021-01-22 19:54:46.501 +00:00 [INF] Executing ViewResult, running view Index.
+2021-01-22 19:54:46.664 +00:00 [INF] Executed ViewResult - view Index executed in 164.0832ms.
+2021-01-22 19:54:46.666 +00:00 [INF] Executed action OpeniddictServer.Controllers.HomeController.Index (OpeniddictServer) in 181.4672ms
+2021-01-22 19:54:46.667 +00:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.HomeController.Index (OpeniddictServer)'
+2021-01-22 19:54:46.683 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/ - - - 200 - text/html;+charset=utf-8 372.8720ms
+2021-01-22 19:54:46.697 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/css/site.min.css?v=9qYfrn9oQViU-wpOp8PAHZbXGSB9LHPX4MuEtiREFJ4 - -
+2021-01-22 19:54:46.697 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/css/vendor.min.css?v=PbX9vQp_qgIrco17xAixD3RewTNZDE7HcXNjpUHylGg - -
+2021-01-22 19:54:46.700 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/css/fontawesome-free-5.4.1-web/css/all.min.css?v=TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8_wTPigGKe6E - -
+2021-01-22 19:54:46.724 +00:00 [INF] Sending file. Request path: '/css/site.min.css'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\css\site.min.css'
+2021-01-22 19:54:46.729 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/css/site.min.css?v=9qYfrn9oQViU-wpOp8PAHZbXGSB9LHPX4MuEtiREFJ4 - - - 200 270 text/css 31.5292ms
+2021-01-22 19:54:46.730 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/js/vendor.min.js?v=wNHTPTVKVXBuBXOTXGXVd6M_-Ew7niKBPydj094IUSE - -
+2021-01-22 19:54:46.733 +00:00 [INF] Sending file. Request path: '/css/vendor.min.css'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\css\vendor.min.css'
+2021-01-22 19:54:46.733 +00:00 [INF] Sending file. Request path: '/css/fontawesome-free-5.4.1-web/css/all.min.css'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\css\fontawesome-free-5.4.1-web\css\all.min.css'
+2021-01-22 19:54:46.736 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/css/fontawesome-free-5.4.1-web/css/all.min.css?v=TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8_wTPigGKe6E - - - 200 50397 text/css 36.1167ms
+2021-01-22 19:54:46.737 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/css/vendor.min.css?v=PbX9vQp_qgIrco17xAixD3RewTNZDE7HcXNjpUHylGg - - - 200 184711 text/css 39.4459ms
+2021-01-22 19:54:46.737 +00:00 [INF] Sending file. Request path: '/js/vendor.min.js'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\js\vendor.min.js'
+2021-01-22 19:54:46.741 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/js/vendor.min.js?v=wNHTPTVKVXBuBXOTXGXVd6M_-Ew7niKBPydj094IUSE - - - 200 245888 application/javascript 11.1975ms
+2021-01-22 19:54:46.752 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/js/site.min.js?v=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU - -
+2021-01-22 19:54:46.752 +00:00 [INF] Sending file. Request path: '/js/site.min.js'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\js\site.min.js'
+2021-01-22 19:54:46.754 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/js/site.min.js?v=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU - - - 200 0 application/javascript 1.9540ms
+2021-01-22 20:23:25.461 +00:00 [INF] User profile is available. Using 'C:\Users\brink\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-22 20:23:25.667 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2021-01-22 20:23:25.668 +00:00 [INF] Quartz Scheduler v.3.2.3.0 created.
+2021-01-22 20:23:25.679 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2021-01-22 20:23:25.679 +00:00 [INF] RAMJobStore initialized.
+2021-01-22 20:23:25.684 +00:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.2.3.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-22 20:23:25.684 +00:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2021-01-22 20:23:25.684 +00:00 [INF] Quartz scheduler version: 3.2.3.0
+2021-01-22 20:23:25.716 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2021-01-22 20:23:25.718 +00:00 [INF] Adding job: OpenIddict.Quartz.OpenIddictQuartzJob
+2021-01-22 20:23:25.732 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-01-22 20:23:26.763 +00:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-01-22 20:23:26.957 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2021-01-22 20:23:27.323 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@__identifier_0='?' (Size = 13)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2021-01-22 20:23:27.415 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 13)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2021-01-22 20:23:27.638 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 13), @p2='?', @p3='?' (Size = 36), @p4='?' (Size = 8), @p5='?' (Size = 17), @p6='?' (Size = 35), @p7='?' (Size = 173), @p8='?' (Size = 26), @p9='?', @p10='?' (Size = 38), @p11='?' (Size = 11), @p12='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictApplications" ("Id", "ClientId", "ClientSecret", "ConcurrencyToken", "ConsentType", "DisplayName", "DisplayNames", "Permissions", "PostLogoutRedirectUris", "Properties", "RedirectUris", "Requirements", "Type")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2021-01-22 20:23:27.682 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__identifier_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2021-01-22 20:23:27.712 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__identifier_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2021-01-22 20:23:27.719 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 17), @p2='?' (Size = 84), @p3='?' (Size = 36), @p4='?', @p5='?', @p6='?', @p7='?' (Size = 21), @p8='?', @p9='?', @p10='?', @p11='?', @p12='?' (Size = 12)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictApplications" ("Id", "ClientId", "ClientSecret", "ConcurrencyToken", "ConsentType", "DisplayName", "DisplayNames", "Permissions", "PostLogoutRedirectUris", "Properties", "RedirectUris", "Requirements", "Type")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2021-01-22 20:23:27.747 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ConcurrencyToken", "o"."Description", "o"."Descriptions", "o"."DisplayName", "o"."DisplayNames", "o"."Name", "o"."Properties", "o"."Resources"
+FROM "OpenIddictScopes" AS "o"
+WHERE "o"."Name" = @__name_0
+LIMIT 1
+2021-01-22 20:23:27.780 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ConcurrencyToken", "o"."Description", "o"."Descriptions", "o"."DisplayName", "o"."DisplayNames", "o"."Name", "o"."Properties", "o"."Resources"
+FROM "OpenIddictScopes" AS "o"
+WHERE "o"."Name" = @__name_0
+LIMIT 1
+2021-01-22 20:23:27.808 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?', @p3='?', @p4='?' (Size = 22), @p5='?' (Size = 33), @p6='?' (Size = 11), @p7='?', @p8='?' (Size = 21)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictScopes" ("Id", "ConcurrencyToken", "Description", "Descriptions", "DisplayName", "DisplayNames", "Name", "Properties", "Resources")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2021-01-22 20:23:28.009 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-22 20:23:28.009 +00:00 [INF] Hosting environment: Development
+2021-01-22 20:23:28.009 +00:00 [INF] Content root path: E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer
+2021-01-22 20:23:28.045 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/ - -
+2021-01-22 20:23:28.200 +00:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.HomeController.Index (OpeniddictServer)'
+2021-01-22 20:23:28.215 +00:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller OpeniddictServer.Controllers.HomeController (OpeniddictServer).
+2021-01-22 20:23:28.236 +00:00 [INF] Executing ViewResult, running view Index.
+2021-01-22 20:23:28.404 +00:00 [INF] Executed ViewResult - view Index executed in 170.0722ms.
+2021-01-22 20:23:28.405 +00:00 [INF] Executed action OpeniddictServer.Controllers.HomeController.Index (OpeniddictServer) in 189.3442ms
+2021-01-22 20:23:28.406 +00:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.HomeController.Index (OpeniddictServer)'
+2021-01-22 20:23:28.420 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/ - - - 200 - text/html;+charset=utf-8 377.6481ms
+2021-01-22 20:23:28.453 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/js/vendor.min.js?v=wNHTPTVKVXBuBXOTXGXVd6M_-Ew7niKBPydj094IUSE - -
+2021-01-22 20:23:28.453 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/css/site.min.css?v=9qYfrn9oQViU-wpOp8PAHZbXGSB9LHPX4MuEtiREFJ4 - -
+2021-01-22 20:23:28.453 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/css/fontawesome-free-5.4.1-web/css/all.min.css?v=TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8_wTPigGKe6E - -
+2021-01-22 20:23:28.453 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/js/site.min.js?v=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU - -
+2021-01-22 20:23:28.453 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/css/vendor.min.css?v=PbX9vQp_qgIrco17xAixD3RewTNZDE7HcXNjpUHylGg - -
+2021-01-22 20:23:28.475 +00:00 [INF] Sending file. Request path: '/js/site.min.js'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\js\site.min.js'
+2021-01-22 20:23:28.479 +00:00 [INF] Sending file. Request path: '/css/site.min.css'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\css\site.min.css'
+2021-01-22 20:23:28.484 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/css/site.min.css?v=9qYfrn9oQViU-wpOp8PAHZbXGSB9LHPX4MuEtiREFJ4 - - - 200 270 text/css 31.3660ms
+2021-01-22 20:23:28.485 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/js/site.min.js?v=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU - - - 200 0 application/javascript 32.0236ms
+2021-01-22 20:23:28.489 +00:00 [INF] Sending file. Request path: '/css/vendor.min.css'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\css\vendor.min.css'
+2021-01-22 20:23:28.489 +00:00 [INF] Sending file. Request path: '/css/fontawesome-free-5.4.1-web/css/all.min.css'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\css\fontawesome-free-5.4.1-web\css\all.min.css'
+2021-01-22 20:23:28.489 +00:00 [INF] Sending file. Request path: '/js/vendor.min.js'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\js\vendor.min.js'
+2021-01-22 20:23:28.492 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/css/fontawesome-free-5.4.1-web/css/all.min.css?v=TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8_wTPigGKe6E - - - 200 50397 text/css 39.3567ms
+2021-01-22 20:23:28.494 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/css/vendor.min.css?v=PbX9vQp_qgIrco17xAixD3RewTNZDE7HcXNjpUHylGg - - - 200 184711 text/css 41.1579ms
+2021-01-22 20:23:28.496 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/js/vendor.min.js?v=wNHTPTVKVXBuBXOTXGXVd6M_-Ew7niKBPydj094IUSE - - - 200 245888 application/javascript 42.8263ms
+2021-01-22 20:26:30.490 +00:00 [INF] User profile is available. Using 'C:\Users\brink\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2021-01-22 20:26:30.688 +00:00 [INF] Initialized Scheduler Signaller of type: Quartz.Core.SchedulerSignalerImpl
+2021-01-22 20:26:30.688 +00:00 [INF] Quartz Scheduler v.3.2.3.0 created.
+2021-01-22 20:26:30.689 +00:00 [INF] JobFactory set to: Quartz.Simpl.MicrosoftDependencyInjectionJobFactory
+2021-01-22 20:26:30.696 +00:00 [INF] RAMJobStore initialized.
+2021-01-22 20:26:30.699 +00:00 [INF] Scheduler meta-data: Quartz Scheduler (v3.2.3.0) 'QuartzScheduler' with instanceId 'NON_CLUSTERED'
+  Scheduler class: 'Quartz.Core.QuartzScheduler' - running locally.
+  NOT STARTED.
+  Currently in standby mode.
+  Number of jobs executed: 0
+  Using thread pool 'Quartz.Simpl.DefaultThreadPool' - with 10 threads.
+  Using job-store 'Quartz.Simpl.RAMJobStore' - which does not support persistence. and is not clustered.
+
+2021-01-22 20:26:30.699 +00:00 [INF] Quartz scheduler 'QuartzScheduler' initialized
+2021-01-22 20:26:30.699 +00:00 [INF] Quartz scheduler version: 3.2.3.0
+2021-01-22 20:26:30.718 +00:00 [INF] Adding 1 jobs, 1 triggers.
+2021-01-22 20:26:30.720 +00:00 [INF] Adding job: OpenIddict.Quartz.OpenIddictQuartzJob
+2021-01-22 20:26:30.733 +00:00 [INF] Scheduler QuartzScheduler_$_NON_CLUSTERED started.
+2021-01-22 20:26:31.553 +00:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-01-22 20:26:31.720 +00:00 [INF] Executed DbCommand (13ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT COUNT(*) FROM "sqlite_master" WHERE "type" = 'table' AND "rootpage" IS NOT NULL;
+2021-01-22 20:26:32.094 +00:00 [INF] Executed DbCommand (10ms) [Parameters=[@__identifier_0='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2021-01-22 20:26:32.184 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__identifier_0='?' (Size = 20)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2021-01-22 20:26:32.379 +00:00 [INF] Executed DbCommand (5ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 20), @p2='?', @p3='?' (Size = 36), @p4='?' (Size = 8), @p5='?' (Size = 25), @p6='?' (Size = 35), @p7='?' (Size = 173), @p8='?' (Size = 26), @p9='?', @p10='?' (Size = 38), @p11='?' (Size = 11), @p12='?' (Size = 6)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictApplications" ("Id", "ClientId", "ClientSecret", "ConcurrencyToken", "ConsentType", "DisplayName", "DisplayNames", "Permissions", "PostLogoutRedirectUris", "Properties", "RedirectUris", "Requirements", "Type")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2021-01-22 20:26:32.418 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2021-01-22 20:26:32.437 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__identifier_0='?' (Size = 17)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ClientId", "o"."ClientSecret", "o"."ConcurrencyToken", "o"."ConsentType", "o"."DisplayName", "o"."DisplayNames", "o"."Permissions", "o"."PostLogoutRedirectUris", "o"."Properties", "o"."RedirectUris", "o"."Requirements", "o"."Type"
+FROM "OpenIddictApplications" AS "o"
+WHERE "o"."ClientId" = @__identifier_0
+LIMIT 1
+2021-01-22 20:26:32.444 +00:00 [INF] Executed DbCommand (2ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 17), @p2='?' (Size = 84), @p3='?' (Size = 36), @p4='?', @p5='?', @p6='?', @p7='?' (Size = 21), @p8='?', @p9='?', @p10='?', @p11='?', @p12='?' (Size = 12)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictApplications" ("Id", "ClientId", "ClientSecret", "ConcurrencyToken", "ConsentType", "DisplayName", "DisplayNames", "Permissions", "PostLogoutRedirectUris", "Properties", "RedirectUris", "Requirements", "Type")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8, @p9, @p10, @p11, @p12);
+2021-01-22 20:26:32.467 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__name_0='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ConcurrencyToken", "o"."Description", "o"."Descriptions", "o"."DisplayName", "o"."DisplayNames", "o"."Name", "o"."Properties", "o"."Resources"
+FROM "OpenIddictScopes" AS "o"
+WHERE "o"."Name" = @__name_0
+LIMIT 1
+2021-01-22 20:26:32.499 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__name_0='?' (Size = 11)], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ConcurrencyToken", "o"."Description", "o"."Descriptions", "o"."DisplayName", "o"."DisplayNames", "o"."Name", "o"."Properties", "o"."Resources"
+FROM "OpenIddictScopes" AS "o"
+WHERE "o"."Name" = @__name_0
+LIMIT 1
+2021-01-22 20:26:32.526 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@p0='?' (Size = 36), @p1='?' (Size = 36), @p2='?', @p3='?', @p4='?' (Size = 22), @p5='?' (Size = 33), @p6='?' (Size = 11), @p7='?', @p8='?' (Size = 21)], CommandType='"Text"', CommandTimeout='30']
+INSERT INTO "OpenIddictScopes" ("Id", "ConcurrencyToken", "Description", "Descriptions", "DisplayName", "DisplayNames", "Name", "Properties", "Resources")
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7, @p8);
+2021-01-22 20:26:32.720 +00:00 [INF] Application started. Press Ctrl+C to shut down.
+2021-01-22 20:26:32.720 +00:00 [INF] Hosting environment: Development
+2021-01-22 20:26:32.720 +00:00 [INF] Content root path: E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer
+2021-01-22 20:26:32.758 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/ - -
+2021-01-22 20:26:32.931 +00:00 [INF] Executing endpoint 'OpeniddictServer.Controllers.HomeController.Index (OpeniddictServer)'
+2021-01-22 20:26:32.947 +00:00 [INF] Route matched with {action = "Index", controller = "Home"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Index() on controller OpeniddictServer.Controllers.HomeController (OpeniddictServer).
+2021-01-22 20:26:32.969 +00:00 [INF] Executing ViewResult, running view Index.
+2021-01-22 20:26:33.132 +00:00 [INF] Executed ViewResult - view Index executed in 164.5337ms.
+2021-01-22 20:26:33.134 +00:00 [INF] Executed action OpeniddictServer.Controllers.HomeController.Index (OpeniddictServer) in 185.8573ms
+2021-01-22 20:26:33.135 +00:00 [INF] Executed endpoint 'OpeniddictServer.Controllers.HomeController.Index (OpeniddictServer)'
+2021-01-22 20:26:33.149 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/ - - - 200 - text/html;+charset=utf-8 394.1533ms
+2021-01-22 20:26:33.185 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/css/fontawesome-free-5.4.1-web/css/all.min.css?v=TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8_wTPigGKe6E - -
+2021-01-22 20:26:33.185 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/css/vendor.min.css?v=PbX9vQp_qgIrco17xAixD3RewTNZDE7HcXNjpUHylGg - -
+2021-01-22 20:26:33.185 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/css/site.min.css?v=9qYfrn9oQViU-wpOp8PAHZbXGSB9LHPX4MuEtiREFJ4 - -
+2021-01-22 20:26:33.204 +00:00 [INF] Sending file. Request path: '/css/site.min.css'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\css\site.min.css'
+2021-01-22 20:26:33.206 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/css/site.min.css?v=9qYfrn9oQViU-wpOp8PAHZbXGSB9LHPX4MuEtiREFJ4 - - - 200 270 text/css 21.2011ms
+2021-01-22 20:26:33.213 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/js/vendor.min.js?v=wNHTPTVKVXBuBXOTXGXVd6M_-Ew7niKBPydj094IUSE - -
+2021-01-22 20:26:33.213 +00:00 [INF] Sending file. Request path: '/css/fontawesome-free-5.4.1-web/css/all.min.css'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\css\fontawesome-free-5.4.1-web\css\all.min.css'
+2021-01-22 20:26:33.213 +00:00 [INF] Sending file. Request path: '/css/vendor.min.css'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\css\vendor.min.css'
+2021-01-22 20:26:33.216 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/css/fontawesome-free-5.4.1-web/css/all.min.css?v=TTtNXZn5LcwfHBadsA92qh3GXV2CGSr8_wTPigGKe6E - - - 200 50397 text/css 31.9553ms
+2021-01-22 20:26:33.217 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/css/vendor.min.css?v=PbX9vQp_qgIrco17xAixD3RewTNZDE7HcXNjpUHylGg - - - 200 184711 text/css 32.5717ms
+2021-01-22 20:26:33.224 +00:00 [INF] Sending file. Request path: '/js/vendor.min.js'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\js\vendor.min.js'
+2021-01-22 20:26:33.228 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/js/vendor.min.js?v=wNHTPTVKVXBuBXOTXGXVd6M_-Ew7niKBPydj094IUSE - - - 200 245888 application/javascript 15.6773ms
+2021-01-22 20:26:33.234 +00:00 [INF] Request starting HTTP/2 GET https://localhost:44395/js/site.min.js?v=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU - -
+2021-01-22 20:26:33.234 +00:00 [INF] Sending file. Request path: '/js/site.min.js'. Physical path: 'E:\Dev\React\Samples\OpenIddictSample\OpeniddictServer\wwwroot\js\site.min.js'
+2021-01-22 20:26:33.236 +00:00 [INF] Request finished HTTP/2 GET https://localhost:44395/js/site.min.js?v=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU - - - 200 0 application/javascript 2.0431ms
+2021-01-22 20:27:30.712 +00:00 [INF] Entity Framework Core 5.0.1 initialized 'ApplicationDbContext' using provider 'Microsoft.EntityFrameworkCore.Sqlite' with options: None
+2021-01-22 20:27:30.799 +00:00 [INF] Executed DbCommand (1ms) [Parameters=[@__threshold_UtcDateTime_0='?', @__p_2='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "o"."Id", "o"."ApplicationId", "o"."AuthorizationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."ExpirationDate", "o"."Payload", "o"."Properties", "o"."RedemptionDate", "o"."ReferenceId", "o"."Status", "o"."Subject", "o"."Type"
+FROM "OpenIddictTokens" AS "o"
+LEFT JOIN "OpenIddictAuthorizations" AS "o0" ON "o"."AuthorizationId" = "o0"."Id"
+WHERE ("o"."CreationDate" < @__threshold_UtcDateTime_0) AND ((("o"."Status" NOT IN ('inactive', 'valid') OR "o"."Status" IS NULL) OR ("o0"."Id" IS NOT NULL AND (("o0"."Status" <> 'valid') OR "o0"."Status" IS NULL))) OR ("o"."ExpirationDate" < rtrim(rtrim(strftime('%Y-%m-%d %H:%M:%f', 'now'), '0'), '.')))
+ORDER BY "o"."Id"
+LIMIT @__p_2 OFFSET @__p_1
+2021-01-22 20:27:30.872 +00:00 [INF] Executed DbCommand (0ms) [Parameters=[@__threshold_UtcDateTime_0='?', @__p_2='?', @__p_1='?'], CommandType='"Text"', CommandTimeout='30']
+SELECT "t"."Id", "t"."ApplicationId", "t"."ConcurrencyToken", "t"."CreationDate", "t"."Properties", "t"."Scopes", "t"."Status", "t"."Subject", "t"."Type", "o1"."Id", "o1"."ApplicationId", "o1"."AuthorizationId", "o1"."ConcurrencyToken", "o1"."CreationDate", "o1"."ExpirationDate", "o1"."Payload", "o1"."Properties", "o1"."RedemptionDate", "o1"."ReferenceId", "o1"."Status", "o1"."Subject", "o1"."Type"
+FROM (
+    SELECT "o"."Id", "o"."ApplicationId", "o"."ConcurrencyToken", "o"."CreationDate", "o"."Properties", "o"."Scopes", "o"."Status", "o"."Subject", "o"."Type"
+    FROM "OpenIddictAuthorizations" AS "o"
+    WHERE ("o"."CreationDate" < @__threshold_UtcDateTime_0) AND ((("o"."Status" <> 'valid') OR "o"."Status" IS NULL) OR (("o"."Type" = 'ad-hoc') AND NOT (EXISTS (
+        SELECT 1
+        FROM "OpenIddictTokens" AS "o0"
+        WHERE "o"."Id" = "o0"."AuthorizationId"))))
+    ORDER BY "o"."Id"
+    LIMIT @__p_2 OFFSET @__p_1
+) AS "t"
+LEFT JOIN "OpenIddictTokens" AS "o1" ON "t"."Id" = "o1"."AuthorizationId"
+ORDER BY "t"."Id", "o1"."Id"

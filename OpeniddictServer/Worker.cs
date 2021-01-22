@@ -32,24 +32,24 @@ namespace OpeniddictServer
                 var manager = provider.GetRequiredService<IOpenIddictApplicationManager>();
 
                 // Angular UI client
-                if ( await manager.FindByClientIdAsync( "angularclient" ) is null )
+                if ( await manager.FindByClientIdAsync( "Travelx-React-Client" ) is null )
                 {
                     await manager.CreateAsync( new OpenIddictApplicationDescriptor
                     {
-                        ClientId = "angularclient",
+                        ClientId = "Travelx-React-Client",
                         ConsentType = ConsentTypes.Explicit,
-                        DisplayName = "angular client PKCE",
+                        DisplayName = "React TravelX client PKCE",
                         DisplayNames =
                         {
                             [CultureInfo.GetCultureInfo("fr-FR")] = "Application cliente MVC"
                         },
                         PostLogoutRedirectUris =
                         {
-                            new Uri("https://localhost:4200")
+                            new Uri("https://localhost:3000")
                         },
                         RedirectUris =
                         {
-                            new Uri("https://localhost:4200")
+                            new Uri("https://localhost:3000/signin-oidc")
                         },
                         Permissions =
                         {
@@ -63,7 +63,7 @@ namespace OpeniddictServer
                             Permissions.Scopes.Email,
                             Permissions.Scopes.Profile,
                             Permissions.Scopes.Roles,
-                            Permissions.Prefixes.Scope + "dataEventRecords"
+                            Permissions.Prefixes.Scope + "travelxData"
                         },
                         Requirements =
                         {
@@ -73,12 +73,12 @@ namespace OpeniddictServer
                 }
 
                 // API
-                if ( await manager.FindByClientIdAsync( "rs_dataEventRecordsApi" ) == null )
+                if ( await manager.FindByClientIdAsync( "rs_travelxDataApi" ) == null )
                 {
                     var descriptor = new OpenIddictApplicationDescriptor
                     {
-                        ClientId = "rs_dataEventRecordsApi",
-                        ClientSecret = "dataEventRecordsSecret",
+                        ClientId = "rs_travelxDataApi",
+                        ClientSecret = "travelxDataSecret",
                         Permissions =
                         {
                             Permissions.Endpoints.Introspection
@@ -93,19 +93,19 @@ namespace OpeniddictServer
             {
                 var manager = provider.GetRequiredService<IOpenIddictScopeManager>();
 
-                if ( await manager.FindByNameAsync( "dataEventRecords" ) is null )
+                if ( await manager.FindByNameAsync( "travelxData" ) is null )
                 {
                     await manager.CreateAsync( new OpenIddictScopeDescriptor
                     {
-                        DisplayName = "dataEventRecords API access",
+                        DisplayName = "travelxData API access",
                         DisplayNames =
                         {
                             [CultureInfo.GetCultureInfo("fr-FR")] = "Accès à l'API de démo"
                         },
-                        Name = "dataEventRecords",
+                        Name = "travelxData",
                         Resources =
                         {
-                            "rs_dataEventRecordsApi"
+                            "rs_travelxDataApi"
                         }
                     } );
                 }
