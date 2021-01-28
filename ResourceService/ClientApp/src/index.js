@@ -7,36 +7,41 @@ import registerServiceWorker from './registerServiceWorker';
 import { Home } from './components/Home';
 import { Counter } from './components/Counter';
 import { Debug } from './components/Debug';
+import { CustomerDetails } from './components/CustomerDetails';
 //import { checkDataType } from 'ajv/dist/compile/validate/datatype';
 
-const baseUrl = document.getElementsByTagName('base')[0].getAttribute('href');
-const rootElement = document.getElementById('root');
-const data = "";
+window.renderCustomerDetails = async (containerId, history, data, events, token) => {
+
+    ReactDOM.render(
+        <CustomerDetails Mfe={true} Data={data} Token={token} CustomerId={data.customerId} OnClick={events.onClick} ShowUpdateButton={data.showUpdateButton} />,
+        document.getElementById(containerId),
+    );
+
+};
+window.unmountCustomerDetails = containerId => {
+    ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
+};
+
+
 window.renderTest = (containerId, history) => {
-
-
 
     ReactDOM.render(
         <Home history={history} />,
         document.getElementById(containerId),
     );
 };
-
-window.renderCounter = async (containerId, history, token) => {
-    var x = 0;
-
-    const data = await getData("profiles/CustomerDetails/547999", token);
-    ReactDOM.render(
-        <Debug bearer={ data.surname } />,
-        document.getElementById(containerId),
-    );
-
-};
-
 window.unmountTest = containerId => {
     ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
 };
 
+window.renderCounter = async (containerId, history, token) => {
+   
+    ReactDOM.render(
+        <Counter  />,
+        document.getElementById(containerId),
+    );
+
+};
 window.unmountCounter = containerId => {
     ReactDOM.unmountComponentAtNode(document.getElementById(containerId));
 };
@@ -44,10 +49,10 @@ window.unmountCounter = containerId => {
 //const externalContainer = 'profile-partial-service';
 //if (!document.getElementById(externalContainer)) {
 //    ReactDOM.render(
-//        <BrowserRouter basename={baseUrl}>
+//        <BrowserRouter basename="/">
 //            <App />
 //        </BrowserRouter>,
-//        rootElement);
+//        document.getElementById('root'));
 
 //    registerServiceWorker();
 //}
