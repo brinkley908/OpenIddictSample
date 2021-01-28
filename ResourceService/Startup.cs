@@ -44,7 +44,7 @@ namespace ResourceService
             var txConn = Configuration.GetConnectionString( "DefaultConnection" );
 
             services.AddDbContext<azTravelXEntities>( options =>
-               options.UseSqlServer( txConn )
+               options.UseSqlite( txConn )
           );
 
             services.AddAutoMapper( options => options.AddProfile<MappingProfile>() );
@@ -72,7 +72,7 @@ namespace ResourceService
                         builder
                             .AllowCredentials()
                             .WithOrigins(
-                                new string[] { "https://localhost:44306", "https://localhost:44369" } )
+                                new string[] { "http://localhost:3000", "https://localhost:44395" } )
                             .SetIsOriginAllowedToAllowWildcardSubdomains()
                             .AllowAnyHeader()
                             .AllowAnyMethod();

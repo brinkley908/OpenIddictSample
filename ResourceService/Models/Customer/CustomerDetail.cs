@@ -28,7 +28,7 @@ namespace ResourceService.Models.Customer
 
         public bool? Partner { get; set; }
 
-        public DateTime? DOB { get; set; }
+        public string DOB { get; set; }
 
         public int? UpdateCount { get; set; }
 

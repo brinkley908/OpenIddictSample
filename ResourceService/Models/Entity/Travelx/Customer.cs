@@ -29,15 +29,15 @@ namespace ResourceService.Models.Entity.Travelx
 
         public bool? Partner { get; set; }
 
-        public DateTime? DOB { get; set; }
+        public string DOB { get; set; }
 
         public int? UpdateCount { get; set; }
 
         public int? HitCount { get; set; }
 
-        public DateTime? DateRegistered { get; set; }
+        public string DateRegistered { get; set; }
 
-        public DateTime? LastUpdated { get; set; }
+        public string LastUpdated { get; set; }
 
         public virtual ICollection<CustomerPinned> CustomerPinneds { get; set; }
 

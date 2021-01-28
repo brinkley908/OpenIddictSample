@@ -1,14 +1,77 @@
 /* Provide sufficient contrast against white background */
 a {
-  color: #0366d6;
+    color: #0366d6;
 }
 
 code {
-  color: #E01A76;
+    color: #E01A76;
 }
 
 .btn-primary {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
+
+.profile-partial {
+    width: 100%;
+}
+
+    .profile-partial .profile-partial-container {
+        width: 100%;
+        padding: 8px;
+    }
+
+        .profile-partial .profile-partial-container .left-col,
+        .profile-partial .profile-partial-container .right-col {
+            width: 50%;
+            display: inline-block;
+            padding: 0 15px;
+            vertical-align: top;
+        }
+
+            .profile-partial .profile-partial-container .left-col .field,
+            .profile-partial .profile-partial-container .right-col .field {
+                display: block;
+                margin-bottom: 8px;
+            }
+
+                .profile-partial .profile-partial-container .left-col .field .title,
+                .profile-partial .profile-partial-container .right-col .field .title {
+                    width: 70px;
+                }
+
+                    .profile-partial .profile-partial-container .left-col .field .title .ant-select-selector,
+                    .profile-partial .profile-partial-container .right-col .field .title .ant-select-selector {
+                        border-top-right-radius: 0 !important;
+                        border-bottom-right-radius: 0 !important;
+                    }
+
+                .profile-partial .profile-partial-container .left-col .field .title-input,
+                .profile-partial .profile-partial-container .right-col .field .title-input {
+                    width: 150px;
+                    border-left: none;
+                    display: none;
+                }
+
+                    .profile-partial .profile-partial-container .left-col .field .title-input.ant-input,
+                    .profile-partial .profile-partial-container .right-col .field .title-input.ant-input {
+                        border-top-left-radius: 0 !important;
+                        border-bottom-left-radius: 0 !important;
+                    }
+
+            .profile-partial .profile-partial-container .left-col label,
+            .profile-partial .profile-partial-container .right-col label {
+                display: block;
+                color: rgba(0, 0, 0, 0.5);
+                margin: 0 0 1px 0;
+            }
+
+.profile-picker {
+    width: 100%;
+}
+
+    .profile-picker .profile-picker-container {
+        width: 100%;
+        padding: 8px;
+    }
