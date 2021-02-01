@@ -1,4 +1,4 @@
-﻿async function GetData(url, token) {
+﻿async function GetData(url, token, defaultValue) {
     var headers = {};
     if (!!token) {
         headers = {
@@ -9,10 +9,8 @@
         }
     }
 
-
     const response = await fetch(process.env.REACT_APP_MFE_RESOURCE + "/" + url, { headers: headers });
-    console.log(response);
-
+ 
     var results = {
         ok: response.ok,
         status: response.status,
@@ -20,7 +18,7 @@
         type: response.type,
         url: response.url,
         headers: response.headers,
-        response: null
+        response: defaultValue
     }; 
 
     if (response.ok) {
