@@ -50,9 +50,8 @@ export class CustomerDetails extends Component {
 
     }
 
-
     async getData() {
-        const data = await GetData(this.state.url, this.state.token, this.state.values);
+        const data = await GetData(this.state.url, this.state.token, null);
         if (data.ok) {
             this.setState({ ...this.state, values: data.response, loading: false });
         }
@@ -84,8 +83,6 @@ export class CustomerDetails extends Component {
     }
 
     defaultTitle() {
-
-
         if (!this.state.values.title) {
             this.onTitleSelect(other);
             return other;
@@ -107,7 +104,6 @@ export class CustomerDetails extends Component {
     }
 
     onClick() {
-
         var updated = false;
 
         if (this.state.updateOnClick) {
@@ -124,7 +120,6 @@ export class CustomerDetails extends Component {
     }
 
     renderForm() {
-
         return (
 
             <>
@@ -185,11 +180,10 @@ export class CustomerDetails extends Component {
     }
 
     render() {
-
         let contents = this.state.loading
             ? <Skeleton active />
-            : this.state.authorised ?
-                this.renderForm()
+            : this.state.authorised
+                ? this.renderForm()
                 : <>Unauthorized</>
 
         return (
@@ -203,9 +197,7 @@ export class CustomerDetails extends Component {
             </div>
 
         );
-
     }
-
 }
 
 
