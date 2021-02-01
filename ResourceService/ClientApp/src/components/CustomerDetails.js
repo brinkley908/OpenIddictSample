@@ -23,6 +23,7 @@ export class CustomerDetails extends Component {
         this.updateCustomerDetails = this.updateCustomerDetails.bind(this);
 
         this.state = {
+            authorised: true,
             loading: true,
             customerId: props.CustomerId,
             token: !!props.Token ? props.Token : null,
@@ -51,8 +52,13 @@ export class CustomerDetails extends Component {
 
 
     async getData() {
-        const data = await GetData(this.state.url, this.state.token);
-        this.setState({ ...this.state, values: data, loading: false });
+        const data = await GetData(this.state.url, this.state.token, this.state.values);
+        if (data.ok) {
+            this.setState({ ...this.state, values: data.response, loading: false });
+        }
+        else {
+            this.setState({ ...this.state, authorised: false, loading: false });
+        }
     }
 
     componentDidMount() {
@@ -182,7 +188,9 @@ export class CustomerDetails extends Component {
 
         let contents = this.state.loading
             ? <Skeleton active />
-            : this.renderForm();
+            : this.state.authorised ?
+                this.renderForm()
+                : <>Unauthorized</>
 
         return (
 
